@@ -1,0 +1,17 @@
+FROM alpine:3.4
+
+RUN apk add --update \
+    curl \
+    git \
+    py-httplib2 \
+    py-jinja2 \
+    py-paramiko \
+    py-pip \
+    py-yaml \
+    python \
+    rsync \
+  && rm -rf /var/cache/apk/*
+
+RUN pip install ansible==2.1.1.0
+
+ENTRYPOINT ["ansible"]
