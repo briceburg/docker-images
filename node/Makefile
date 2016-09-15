@@ -13,4 +13,4 @@ $(DOCKERFILES):
 	$(eval TAG = $(subst Dockerfile,latest,$(TAG)))
 	cd $(CWD)
 	docker build -t briceburg/$(PROJECT) -t briceburg/$(PROJECT):$(TAG) -f $@ .
-	[ "$PUBLISH" = "yes" ] && docker push briceburg/$(PROJECT):$(TAG)
+	if [ "$(PUBLISH)" = "yes" ]; then docker push briceburg/$(PROJECT):$(TAG) ; fi
