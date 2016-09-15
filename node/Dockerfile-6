@@ -1,0 +1,6 @@
+FROM mhart/alpine-node:6
+
+RUN apk add --update \
+    git \
+    openssh \
+  && rm -rf /var/cache/apk/*
