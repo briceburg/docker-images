@@ -12,6 +12,6 @@ RUN apk add --update \
     rsync \
   && rm -rf /var/cache/apk/*
 
-RUN pip install ansible==2.1.1.0
+RUN pip install ansible==2.1.2.0
 
 ENTRYPOINT ["ansible"]
