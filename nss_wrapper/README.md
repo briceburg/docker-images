@@ -37,7 +37,7 @@ uid=9999(anonymous) gid=9999(anonymous) groups=9999(anonymous)
 
 ### Dockerfile Example
 
-To wrap a command, e.g. `git`, base your image off this one. E.g. 
+To wrap a command, e.g. `git`, base your image off this one. E.g.
 
 ```
 FROM briceburg/nss_wrapper:debian-8
@@ -52,4 +52,4 @@ ENTRYPOINT ["/nss-wrap.sh", "git"]
 
 ### In-the-Wild
 
-The :dex variant is used by a few [dex](https://github.org/dockerland/dex) images to map the host's _real_ username and _real_ groupname into containers. See the [git Dockerfile]() for an example.
+The :dex variant is used by a few [dex](https://github.org/dockerland/dex) images to map the host's _real_ username and _real_ groupname into containers. See the [git Dockerfile](https://github.com/dockerland/dex-dockerfiles-extra/tree/master/dex-images/git/Dockerfile) for an example.
