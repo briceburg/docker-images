@@ -1,0 +1,14 @@
+FROM briceburg/nss_wrapper:debian-8
+
+#
+# dex nss_wrapper:latest image
+#
+
+COPY nss-wrap-dex.sh /nss-wrap.sh
+
+#
+# v1 dex-api
+#
+
+LABEL \
+  org.dockerland.dex.api="v1"
