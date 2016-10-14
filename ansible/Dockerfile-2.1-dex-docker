@@ -14,7 +14,7 @@ RUN apk add --update \
 
 LABEL \
   org.dockerland.dex.api="v1" \
-  org.dockerland.dex.docker_envars="LANG TZ ANSIBLE_CFG DOCKER_TLS_VERIFY DOCKER_HOST DOCKER_CERT_PATH DOCKER_MACHINE_NAME" \
+  org.dockerland.dex.docker_envars="LANG TZ ANSIBLE_* DOCKER_*" \
   org.dockerland.dex.docker_flags="-it" \
   org.dockerland.dex.docker_groups="docker" \
   org.dockerland.dex.docker_home="ansible" \
