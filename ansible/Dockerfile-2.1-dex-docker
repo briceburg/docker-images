@@ -8,6 +8,11 @@ RUN apk add --update \
     docker \
   && rm -rf /var/cache/apk/*
 
+
+# docker-machine
+RUN curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine && \
+  chmod +x /usr/local/bin/docker-machine
+
 #
 # v1 dex-api
 #
