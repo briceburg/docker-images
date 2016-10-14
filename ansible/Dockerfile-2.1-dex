@@ -1,0 +1,17 @@
+FROM briceburg/ansible:2.1
+
+#
+# dex ansible:2.1-dex
+#
+
+
+#
+# v1 dex-api
+#
+
+LABEL \
+  org.dockerland.dex.api="v1" \
+  org.dockerland.dex.docker_envars="LANG TZ ANSIBLE_*" \
+  org.dockerland.dex.docker_flags="-it" \
+  org.dockerland.dex.docker_home="ansible" \
+  org.dockerland.dex.docker_volumes="\$ANSIBLE_CFG:\$ANSIBLE_CFG:ro ~/.ansible.cfg:/dex/home/.ansible.cfg:ro /etc/ansible/ansible.cfg"

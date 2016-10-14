@@ -1,4 +1,4 @@
-FROM briceburg/ansible:2.1
+FROM briceburg/ansible:2.1-dex
 
 #
 # dex ansible:2.1-dex-docker
@@ -18,9 +18,6 @@ RUN curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-ma
 #
 
 LABEL \
-  org.dockerland.dex.api="v1" \
-  org.dockerland.dex.docker_envars="LANG TZ ANSIBLE_* DOCKER_*" \
-  org.dockerland.dex.docker_flags="-it" \
+  org.dockerland.dex.docker_envars="DOCKER_* MACHINE_STORAGE_PATH LANG TZ ANSIBLE_*" \
   org.dockerland.dex.docker_groups="docker" \
-  org.dockerland.dex.docker_home="ansible" \
-  org.dockerland.dex.docker_volumes="/var/run/docker.sock \$DOCKER_CERT_PATH:\$DOCKER_CERT_PATH \$ANSIBLE_CFG:\$ANSIBLE_CFG:ro ~/.ansible.cfg:/dex/home/.ansible.cfg:ro /etc/ansible/ansible.cfg"
+  org.dockerland.dex.docker_volumes="/var/run/docker.sock \$MACHINE_STORAGE_PATH \$DOCKER_CERT_PATH \$ANSIBLE_CFG:\$ANSIBLE_CFG:ro ~/.ansible.cfg:/dex/home/.ansible.cfg:ro /etc/ansible/ansible.cfg"
