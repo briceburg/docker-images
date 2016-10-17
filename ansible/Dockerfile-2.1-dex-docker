@@ -4,10 +4,8 @@ FROM briceburg/ansible:2.1-dex
 # dex ansible:2.1-dex-docker
 #
 
-RUN apk add --update \
-    docker \
-  && rm -rf /var/cache/apk/*
-
+RUN apk add --no-cache \
+  docker
 
 # docker-machine
 RUN curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine && \

@@ -1,18 +1,17 @@
 FROM alpine:3.4
-
-RUN apk add --update \
-    bash \
-    curl \
-    git \
-    openssh-client \
-    py-httplib2 \
-    py-jinja2 \
-    py-paramiko \
-    py-pip \
-    py-yaml \
-    python \
-    rsync \
-  && rm -rf /var/cache/apk/*
+RUN apk add --no-cache \
+  bash \
+  curl \
+  git \
+  openssl \
+  openssh-client \
+  py-httplib2 \
+  py-jinja2 \
+  py-paramiko \
+  py-pip \
+  py-yaml \
+  python \
+  rsync
 
 RUN pip install ansible==2.1.2.0
 
