@@ -4,4 +4,4 @@
   * rsync
   * httplib2
 
-includes [dex](https://github.org/dockerland/dex) image base.
+includes [dex](https://github.org/dockerland/dex) Dockerfiles.
