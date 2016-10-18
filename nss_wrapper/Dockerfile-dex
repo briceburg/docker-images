@@ -1,4 +1,4 @@
-FROM briceburg/nss_wrapper:debian-8
+FROM briceburg/nss_wrapper:debian
 
 #
 # dex nss_wrapper:latest image
