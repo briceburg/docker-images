@@ -14,4 +14,5 @@ LABEL \
   org.dockerland.dex.docker_envars="LANG TZ ANSIBLE_*" \
   org.dockerland.dex.docker_flags="-it" \
   org.dockerland.dex.docker_home="ansible" \
-  org.dockerland.dex.docker_volumes="\$ANSIBLE_CFG:\$ANSIBLE_CFG:ro ~/.ansible.cfg:/dex/home/.ansible.cfg:ro /etc/ansible/ansible.cfg"
+  org.dockerland.dex.docker_volumes="\$ANSIBLE_CFG:\$ANSIBLE_CFG:ro ~/.ansible.cfg:/dex/home/.ansible.cfg:ro /etc/ansible/ansible.cfg" \
+  org.dockerland.dex.host_users="ro"
