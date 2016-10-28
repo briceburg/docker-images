@@ -2,7 +2,7 @@ CWD:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 DOCKERFILES := $(wildcard Dockerfile*)
 PUBLISH := no
-PROJECT := node
+PROJECT := debian
 
 all: $(DOCKERFILES)
 .PHONY: $(DOCKERFILES)
