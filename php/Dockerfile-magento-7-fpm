@@ -6,6 +6,7 @@ FROM php:7-fpm
 
 RUN apt-get update && apt-get install -y \
     bzip2 \
+    ca-certificates \
     curl \
     git \
     openssh-client \
