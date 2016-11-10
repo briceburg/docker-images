@@ -5,11 +5,16 @@ FROM briceburg/ansible:2.1-dex
 #
 
 RUN apk add --no-cache \
-  docker
+  docker \
+  py-pip
+
 
 # docker-machine
 RUN curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine && \
   chmod +x /usr/local/bin/docker-machine
+
+# docker-compose
+RUN pip install docker-compose==1.8.1
 
 #
 # v1 dex-api
