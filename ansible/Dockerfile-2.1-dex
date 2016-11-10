@@ -4,6 +4,10 @@ FROM briceburg/ansible:2.1
 # dex ansible:2.1-dex
 #
 
+ENV \
+  ANSIBLE_RETRY_FILES_SAVE_PATH=/dex/home/.ansible/retry-files \
+  ANSIBLE_TIMEOUT=25
+
 
 #
 # v1 dex-api
