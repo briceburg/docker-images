@@ -3,4 +3,5 @@ FROM mhart/alpine-node:6
 RUN apk add --no-cache \
     ca-certificates \
     git \
-    openssh
+    openssh \
+  && npm install -g yarn
