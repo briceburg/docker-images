@@ -4,8 +4,11 @@ FROM debian:jessie
 #  http://opensource.apple.com/
 
 RUN apt-get update && apt-get install -y \
+  autoconf \
+  bison \
   curl \
   libbsd-dev \
+  make \
   gcc \
   patch \
   && rm -rf /var/lib/apt/lists/*
