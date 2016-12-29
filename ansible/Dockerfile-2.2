@@ -1,0 +1,19 @@
+FROM alpine:3.4
+RUN apk add --no-cache \
+  bash \
+  ca-certificates \
+  curl \
+  git \
+  openssl \
+  openssh-client \
+  py-httplib2 \
+  py-jinja2 \
+  py-paramiko \
+  py-pip \
+  py-yaml \
+  python \
+  rsync
+
+RUN pip install ansible==2.2.0.0
+
+ENTRYPOINT ["ansible"]
