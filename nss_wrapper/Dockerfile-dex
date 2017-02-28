@@ -10,5 +10,4 @@ COPY nss-wrap-dex.sh /nss-wrap.sh
 # v1 dex-api
 #
 
-LABEL \
-  org.dockerland.dex.api="v1"
+LABEL org.dockerland.dex.api="v1"
