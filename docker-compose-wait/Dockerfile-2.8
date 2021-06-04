@@ -1,0 +1,10 @@
+FROM busybox:1.32
+
+ARG WAIT_VERSION=2.8.0
+ARG WAIT_SHA256SUM=da75829985a9d2cccb072a77168356708901ca9ec767cb5605eb79b4758d8d00
+RUN wget https://github.com/ufoscout/docker-compose-wait/releases/download/$WAIT_VERSION/wait &&\
+    { [ "$(sha256sum wait | awk '{print $1}')" = "$WAIT_SHA256SUM" ] || exit 99 ; } &&\
+    chmod +x wait && mv wait /bin/
+
+ENTRYPOINT []
+CMD true
