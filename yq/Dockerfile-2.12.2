@@ -1,0 +1,15 @@
+ARG REGISTRY=docker.io
+
+# base ci image
+FROM $REGISTRY/alpine:3
+RUN apk add --no-cache \
+    jq \
+    py3-pip \
+    py3-yaml \
+  && pip3 install yq==2.12.2
+
+#
+# container runtime
+#
+
+ENTRYPOINT ["yq"]
